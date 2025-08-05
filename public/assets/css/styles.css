@@ -1,0 +1,905 @@
+@import url("https://use.typekit.net/nrl7nhw.css");
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;600;800&family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --first-color: #1F3A93;
+    --segunda-color: #8E44AD;
+    --terceira-cor: #3498D8;
+    --quarta-cor: #BDC3C7;
+    --quinta-cor: #333333;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    align-content: center;
+}
+
+body {
+    max-height: 100vw;
+    width: 100%;
+    height: 100%;
+    background-color: var(--segunda-color);
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    margin-top: 0;
+    /* remover margem para não atrapalhar centralização */
+}
+
+.menu-body {
+    align-content: center;
+}
+
+/* Login Page */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 380px;
+    height: 590px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.forget-pass {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    margin-top: 0;
+    flex-direction: column;
+}
+
+.forget{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    align-content: center;
+    width: 100%;
+    height: 390px;
+    margin-left: 5px;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.container h1,
+.forget h1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Sofast';
+    font-size: 28px;
+    color: var(--segunda-color);
+}
+
+.container>label {
+    color: #222222;
+    font-family: 'Sofast';
+    margin-left: -280px;
+}
+
+
+.container>input,
+.forget>form>input {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 330px;
+    height: 50px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #222222;
+    border-radius: 10px;
+}
+
+.forget>form>input::placeholder {
+    color: var(--quarta-cor);
+    font-family: 'Sofast';
+    font-size: 18px;
+
+}
+
+.submit-btn {
+    width: 330px;
+    height: 55px;
+    background: var(--segunda-color);
+    text-align: center;
+    font-family: 'Sofast';
+    font-size: 18px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.container>a,
+.forget>a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--segunda-color);
+    font-family: 'Sofast';
+    font-size: 18px;
+}
+
+.logo {
+    width: 238.07px;
+    height: 73.15px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Menu Page */
+.menu-aluno h1 {
+    color: #fff;
+    font-family: 'Sofast';
+    font-size: 28px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.menu-aluno h2 {
+    color: #fff;
+    font-family: 'Sofast';
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.menu-aluno, .cursos, .acesso {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    flex-direction: column;
+}
+
+.acesso>h2 {
+    text-decoration: underline;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menuBtn {
+    display: flex;
+    background: #fff;
+    justify-content: left;
+    width: 280px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 12px;
+
+    a {
+        font-size: 20px;
+        color: #222222;
+        font-family: 'Sofast';
+        text-decoration: none;
+    }
+}
+
+footer {
+    width: 100%;
+    background: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerMenu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Sofast';
+    font-size: 20px;
+    color: #222222;
+    text-decoration: none;
+}
+
+/* Courses Page */
+
+.cursos-aluno, .notas-aluno,
+.perfil-aluno, .settings-aluno{
+    display: flex;
+    /* centraliza horizontalmente */
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    flex-direction: column;
+}
+
+.cursos-aluno h2 {
+    font-family: 'Sofast';
+    font-size: 18px;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 1.5%;
+    text-align: center;
+}
+
+.backBtn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    z-index: 1;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+.curso {
+    display: flex;
+    margin-top: 10px;
+    width: 380px;
+    border-radius: 10px;
+    height: 120px;
+    border: none;
+    background: #fff;
+    margin-left: 10px;
+}
+
+.curso h2:nth-child(2) {
+    font-size: 18px;
+    font-family: 'Sofast';
+    z-index: 1;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 150px;
+    color: var(--segunda-color);
+}
+
+.curso>h3 {
+    z-index: 1;
+    position: absolute;
+    font-family: 'Sofast';
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 100px;
+    color: var(--segunda-color);
+}
+
+.curso>h2:nth-child(4) {
+    z-index: 1;
+    position: absolute;
+    color: #222222;
+    margin-top: 60px;
+    font-size: 14px;
+    margin-left: 100px;
+    font-family: 'Sofast';
+}
+
+
+.curso>h2:nth-child(5) {
+    z-index: 1;
+    position: absolute;
+    color: #222222;
+    margin-top: 80px;
+    font-size: 14px;
+    margin-left: 100px;
+    font-family: 'Sofast';
+}
+
+.img-space {
+    width: 80px;
+    height: 80px;
+    border: none;
+    z-index: 1;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background: var(--quarta-cor);
+
+    img {
+        width: 80px;
+        border-radius: 10px;
+        height: 80px;
+    }
+}
+
+.nota {
+    display: flex;
+    margin-top: 40px;
+    width: 350px;
+    border-radius: 10px;
+    height: 180px;
+    border: none;
+    background: #fff;
+    margin-left: 20px;
+}
+
+.nota-curso>h2:nth-child(1){
+    margin-top: -120px;
+    text-align: center;
+}
+
+.nota-curso>h2:nth-child(4){
+    margin-top: 100px !important;
+    word-wrap: break-word;
+    width: 316px;
+}
+
+.nota-curso>h1{
+    font-family: 'Sofast';
+    font-size: 20px;
+    color: var(--segunda-color);
+    margin-top: -120px;
+    margin-left: 100.5px;
+}
+
+.nota-curso>h3:nth-child(2){
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.nota h2:nth-child(1) {
+    font-size: 18px;
+    font-family: 'Sofast';
+    margin-top: 20px;
+    color: var(--segunda-color);
+}
+
+.nota>h3 {
+    font-family: 'Sofast';
+    font-size: 16px;
+    margin-top: 50px;
+    color: #222222;
+}
+
+.nota>h2:nth-child(3) {
+    color: #222222;
+    margin-top: 0px;
+    font-size: 14px;
+    margin-left: -80px;
+    font-family: 'Sofast';
+}
+
+
+.nota>h2:nth-child(4) {
+    color: #222222;
+    width: 338px;
+    height: 38px;
+    margin-top: 110px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-family: 'Sofast';
+}
+
+.settingsBtn {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    text-align: left;
+    width: 280px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 12px;
+
+    a {
+        font-size: 20px;
+        color: #222222;
+        font-family: 'Sofast';
+        text-decoration: none;
+    }
+}
+
+.settingsFooter {
+    margin-top: 245px;
+}
+
+.results{
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    flex-direction: column;
+}
+
+.results>a {
+    text-decoration: none;
+}
+
+/* Página de Notas */
+.notas-aluno{
+    display: flex;
+    /* centraliza horizontalmente */
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    flex-direction: column;
+}
+
+.notas-aluno>h2 {
+    color: #fff;
+    font-family: 'Sofast';
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+
+.result {
+    display: flex;
+    margin: 20px auto 0 auto;
+    /* top: 40px, left/right: auto (centraliza) */
+    width: 350px;
+    border-radius: 10px;
+    height: 180px;
+    border: none;
+    background: #fff;
+    text-align: center;
+}
+
+
+.result>h2:nth-child(1) {
+    font-size: 18px;
+    font-family: 'Sofast';
+    margin-top: -60px;
+    margin-left: 120px;
+    color: var(--segunda-color);
+}
+
+
+.result>h3 {
+    z-index: 1;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 105px;
+    font-family: 'Sofast';
+    font-size: 16px;
+    color: var(--segunda-color);
+}
+
+.notas-aluno {
+    text-decoration: none;
+}
+
+.result>h2:nth-child(5) {
+    color: #222222;
+    margin-top: 65px;
+    font-size: 14px;
+    margin-left: -120px;
+    font-family: 'Sofast';
+}
+
+.result p {
+    color: #222222;
+    font-size: 14px;
+    width: 312px;
+    height: 38px;
+    font-family: 'Sofast';
+    text-align: center;
+    margin-top: 120px;
+    margin-left: -210px;
+}
+
+.result>h2:nth-child(3) {
+    color: #222222;
+    z-index: 1;
+    position: absolute;
+    margin-top: 70px;
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: 'Sofast';
+}
+
+.result>h2:nth-child(4) {
+    color: #222222;
+    z-index: 1;
+    position: absolute;
+    margin-top: 90px;
+    font-size: 16px;
+    margin-left: 10px;
+    font-family: 'Sofast';
+}
+
+
+.cadastro>label {
+    color: #222222;
+}
+
+
+/* Projects Page */
+
+.projetos{
+        display: flex;
+        justify-content: center;
+        /* centraliza horizontalmente */
+        align-items: center;
+        /* centraliza verticalmente */
+        height: 100vh;
+        /* altura total da viewport para centralização vertical */
+        margin-top: -90px;
+        flex-direction: column;
+}
+
+.projeto {
+    width: 350px;
+    height: 211px;
+    background: #fff;
+    margin: 40px auto 0 auto;
+    /* centraliza horizontalmente, mantém margem superior */
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.projeto a {
+    text-decoration: none;
+}
+
+
+.projeto h2:nth-child(1) {
+    color: var(--segunda-color);
+    font-family: 'Sofast';
+    margin-bottom: 20px;
+}
+
+.projeto h3 {
+    color: #222222;
+    font-family: 'Sofast';
+    margin-top: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.projeto>a {
+    font-family: 'Sofast';
+    color: var(--segunda-color);
+    margin-left: 45px;
+    font-size: 20px;
+}
+
+/* Contact Page */
+
+.contact {
+    width: 360px;
+    height: 160px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.contact>h2:nth-child(1) {
+    color: var(--segunda-color);
+    font-family: 'Sofast';
+    font-size: 20px;
+}
+
+.contact>h2:nth-child(2) {
+    color: #222222;
+    font-family: 'Sofast';
+    font-size: 14px;
+    margin-top: 20px;
+    margin-left: -30px;
+}
+
+.contact>h2:nth-child(3) {
+    color: #222222;
+    font-family: 'Sofast';
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: -142px;
+}
+
+.contact>h2:nth-child(4) {
+    color: #222222;
+    font-family: 'Sofast';
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: -115px;
+}
+
+.contact>h2:nth-child(5) {
+    color: #222222;
+    font-family: 'Sofast';
+    font-size: 14px;
+    margin-top: 0px;
+    margin-left: -35px;
+}
+
+.assunto {
+    width: 350px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.assunto label {
+    color: #fff;
+    font-family: 'Sofast';
+    font-size: 18px;
+}
+
+.assunto input {
+    width: 350px;
+    height: 54px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.assunto input::placeholder {
+    font-family: 'Sofast';
+    font-size: 18px;
+    color: var(--quarta-cor);
+}
+
+.message {
+    width: 350px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.message label {
+    color: #fff;
+    font-family: 'Sofast';
+    font-size: 18px;
+}
+
+.message input {
+    width: 350px;
+    height: 54px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.message input::placeholder {
+    font-family: 'Sofast';
+    font-size: 18px;
+    color: var(--quarta-cor);
+}
+
+.submit-contact {
+    width: 280px;
+    height: 40px;
+    background: #fff;
+    border-radius: 10px;
+    color: var(--segunda-color);
+    border: none;
+    font-family: 'Sofast';
+    font-size: 16px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.contact-footer {
+    margin-top: 50px;
+}
+
+/* Profile Page */
+.perfil {
+    font-family: 'Sofast';
+    max-width: 350px;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    left: 2.5%;
+    margin: 40px auto 20px auto;
+    /* topo 120px, horizontal auto para centralizar */
+    position: relative;
+    /* para a img posicionada dentro funcionar melhor */
+}
+
+.img {
+    z-index: 1000;
+    position: absolute;
+    left: 33.5%;
+    /* centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* ajusta o centro da imagem */
+    top: -50px;
+    /* substitui margin-top negativo */
+}
+
+.info {
+    margin-top: 20px;
+    margin-left: -28px;
+
+    h3 {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    p {
+        color: #fff;
+        font-size: 15px;
+    }
+}
+
+.editPf {
+    margin-top: 40px;
+    margin-left: 25px;
+    height: 40px;
+    width: 220px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+
+    a {
+        font-family: 'Sofast';
+        font-size: 16px;
+        color: var(--segunda-color);
+        text-decoration: none;
+    }
+}
+
+/* Notifications Page */
+.notifics {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 71vh;
+    /* altura total da viewport para centralização vertical */
+    margin-top: 0;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.notificacoes-aluno>h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Sofast';
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.notific {
+    height: 160px;
+    width: 350px;
+    background: #fff;
+    font-family: 'Sofast';
+    border: none;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.notific h2 {
+    font-size: 14px;
+    margin-top: -10px;
+    color: var(--segunda-color);
+}
+
+.notific h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #222222;
+}
+
+.notific p {
+    margin-top: 10px;
+    color: var(--quarta-cor);
+}
+
+.perfil-aluno>h2 {
+    text-align: center;
+    font-family: 'Sofast';
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Settings Page */
+
+.settings-aluno {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    margin-top: 0;
+    flex-direction: column;
+}
+
+.settings-aluno>h2 {
+    color: #fff;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Sofast';
+}
+
+.back {
+    margin-left: -92%;
+    margin-top: -730px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* altura total da viewport para centralização vertical */
+    margin-top: 0;
+    flex-direction: column;
+}
+
+/* Cadastro */
+
+.cadastro-img{
+    width: 80px;
+    height: 80px;
+    z-index: 1000;
+    position: absolute;
+    margin-top: -950px;
+    border-radius: 50%;
+    background: var(--quarta-cor);
+    
+}
+.cadastro>h1{
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Sofast';
+    color: #fff;
+    font-size: 20px;
+}
+
+.cadastro-form{
+    margin-top:60px;
+}
+
+/* Mensagens de Erro e Sucesso */
+
+.success-msg{
+    color: #28a745;
+    font-family: 'Sofast';
+    font-size: 14px;
+    text-align: center;
+}
