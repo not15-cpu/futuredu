@@ -18,11 +18,11 @@
         $nomeCompleto = $aluno['nome_aluno'];
         $nomeAluno = explode(' ', $nomeCompleto);
         ?>
-        <h1>Olá, <?=$nomeAluno[0];?>!</h1>
-        <h2>O que você deseja fazer hoje?</h2>
+        <h1 data-tts="Olá, <?=$nomeAluno[0];?>!">Olá, <?=$nomeAluno[0];?>!</h1>
+        <h2 data-tts="O que você deseja fazer hoje?">O que você deseja fazer hoje?</h2>
         <div class="acesso">
             <h2>Acesso Rápido</h2>
-            <button class="menuBtn" data-tts="Meus Cursos"><a href="<?=URL_BASE;?>courses">📚 Meus Cursos</a></button>
+            <button class="menuBtn" data-tts="Meus Cursos"><a href="<?=URL_BASE;?>index.php?url=courses">📚 Meus Cursos</a></button>
             <button class="menuBtn" data-tts="Minhas Notas"><a href="<?=URL_BASE;?>courses/notas">📝 Minhas Notas</a></button>
             <button class="menuBtn" data-tts="Meus Projetos"><a href="<?=URL_BASE;?>projects">📁 Meus Projetos</a></button>
             <button class="menuBtn" data-tts="Enviar Mensagem"><a href="<?=URL_BASE;?>messages">📨 Enviar Mensagem</a></button>

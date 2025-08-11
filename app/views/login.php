@@ -9,7 +9,7 @@
 </head>
 
 <body class="login-body">
-    <form action="<?= URL_BASE; ?>login/login" method="POST">
+    <form action="<?= URL_BASE; ?>index.php?url=login/login" method="POST">
         <div class="container">
             <img src="assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
             <h1>Login do Aluno</h1>

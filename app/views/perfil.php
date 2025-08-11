@@ -19,27 +19,28 @@
             <div class="img-space img"></div>
             <div class="info">
                 <h3>Nome:</h3>
-                <p>José da Silva</p>
+                <p><?=$aluno['nome_aluno'];?></p>
             </div>
             <div class="info">
                 <h3>Email:</h3>
-                <p>jose.dasilva@gmail.com</p>
+                <p><?=$aluno['email_aluno'];?></p>
             </div>
             <div class="info">
                 <h3>Telefone:</h3>
-                <p>(11) 91234-5678</p>
+                <p><?=$aluno['telefone1_aluno'];?></p>
             </div>
             <div class="info">
                 <h3>Data de Nascimento:</h3>
-                <p>10/05/2000</p>
+                <?php date('d-m-Y');?>
+                <p><?=$aluno['data_nasc_aluno'];?></p>
             </div>
             <div class="info">
                 <h3>Endereço:</h3>
-                <p>Rua A, 100 - Centro de São Paulo / SP</p>
+                <p><?=$aluno['endereco_aluno'];?>, <?=$aluno['numero_aluno'];?> - <?=$aluno['bairro_aluno'];?> / <?=$aluno['estado_aluno'];?></p>
             </div>
             <div class="info">
                 <h3>Responsável:</h3>
-                <p>Maria da Silva - (11) 45674-4567</p>
+                <p><?=$aluno['nome_responsavel'];?> - <?=$aluno['telefone_responsavel'];?></p>
             </div>
             <button class="editPf"><a href="editar.html">Editar</a></button>
         </div>

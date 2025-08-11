@@ -1,13 +1,12 @@
 <?php
 
 
+class PerfilController extends Controller{
 
-class HomeController extends Controller{
-
-    public function index(){
+    public function index()
+    {
         $dados = array();
-
-        if(!isset($_SESSION['aluno'])){
+if(!isset($_SESSION['aluno'])){
             header("Location:".URL_BASE."index.php?url=login");
             exit;
         }else{
@@ -30,10 +29,8 @@ class HomeController extends Controller{
         if($resultado['id_aluno']){
             $dados['aluno'] = $resultado;
         }
-
-            
-        $this->carregarViews('menu', $dados);
-
+        
+        $this->carregarViews('perfil', $dados);
     }
 
 }

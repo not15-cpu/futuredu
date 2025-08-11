@@ -17,10 +17,10 @@ class LoginController extends Controller{
             $senha = filter_input(INPUT_POST, 'senha_aluno', FILTER_SANITIZE_SPECIAL_CHARS) ??  '';
     
             if (isset($email) && isset($senha)) {
-                $postData = [
+                $postData = http_build_query([
                     'email_aluno' => $email,
                     'senha_aluno' => $senha
-                ];
+                ]);
     
                 $ch = curl_init($url);
     
@@ -28,12 +28,8 @@ class LoginController extends Controller{
                 curl_setopt($ch, CURLOPT_POST, true);
     
                 // Envia os dados como x-www-form-urlencoded
-                curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
     
-                curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                    'Content-Type: application/x-www-form-urlencoded',
-                    'Accept: application/json'
-                ]);
     
                 $response = curl_exec($ch);
     
@@ -42,17 +38,21 @@ class LoginController extends Controller{
                 } else {
                     $resultado = json_decode($response, true); // decodifica JSON da resposta
                     if ($resultado['mensagem'] == 'Tudo Certo!') {
-                        $_SESSION['userId'] = $resultado['Aluno']['id_aluno'];
-                        header("Location:".URL_BASE."home");
+                        $_SESSION['sucesso_login'] = 'Conectado com sucesso, redirecionando para o menu.';
+                        $_SESSION['aluno'] = $resultado['Aluno'];
+                        header("Location:".URL_BASE."index.php?url=home");
                         exit;
                     } else {
-                        print_r($resultado['erro']);
+                        $_SESSION['erro_login'] = 'Erro ao conectar com o servidor.';
+                        echo($resultado['erro']);
+                        header("Location:".URL_BASE."index.php?url=login");
                     }
                 }
-    
+                
                 curl_close($ch);
             } else {
                 echo "Email ou senha inválidos.";
+                header("Location:".URL_BASE."index.php?url=login");
             }
         }
     }
