@@ -16,7 +16,9 @@
         <a href="menu.html" class="backBtn">⮨</a>
         <h2>Perfil do Aluno</h2>
         <div class="perfil">
-            <div class="img-space img"></div>
+            <div class="img-space img">
+                <img src="<?=URL_BASE;?>assets/img/alunos/<?=$aluno['foto_aluno'];?>" alt="<?=$aluno['alt_aluno'];?>">
+            </div>
             <div class="info">
                 <h3>Nome:</h3>
                 <p><?=$aluno['nome_aluno'];?></p>
@@ -31,8 +33,7 @@
             </div>
             <div class="info">
                 <h3>Data de Nascimento:</h3>
-                <?php date('d-m-Y');?>
-                <p><?=$aluno['data_nasc_aluno'];?></p>
+                <p><?=date('d/m/Y', strtotime($aluno['data_nasc_aluno']));?></p>
             </div>
             <div class="info">
                 <h3>Endereço:</h3>

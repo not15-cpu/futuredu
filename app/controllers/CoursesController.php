@@ -7,9 +7,11 @@ class CoursesController extends Controller{
     public function index(){
         $dados = array();
 
-        $userId = $_SESSION['userId'];
+        $aluno = $_SESSION['aluno'];
 
-        $url = API_BASE."api/ListarCursosMatriculados/".$userId;
+        $userId = $aluno['id_aluno'];
+
+        $url = API_BASE."ListarCursosMatriculados/".$userId;
 
         $ch = curl_init($url);
 
