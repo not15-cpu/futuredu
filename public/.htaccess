@@ -2,7 +2,7 @@
 RewriteEngine On
 
 #Definir o caminho base da aplicação
-RewriteBase /sistema-escola-App/public/
+RewriteBase /futuredu/public/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 

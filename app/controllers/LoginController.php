@@ -10,11 +10,11 @@ class LoginController extends Controller{
     }
 
     public function login(){
-        $url = API_BASE . 'api/LoginAluno';
+        $url = API_BASE . 'LoginAluno';
     
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = filter_input(INPUT_POST, 'email_aluno', FILTER_VALIDATE_EMAIL);
-            $senha = filter_input(INPUT_POST, 'senha_aluno', FILTER_SANITIZE_SPECIAL_CHARS);
+            $email = filter_input(INPUT_POST, 'email_aluno', FILTER_VALIDATE_EMAIL) ??  '';
+            $senha = filter_input(INPUT_POST, 'senha_aluno', FILTER_SANITIZE_SPECIAL_CHARS) ??  '';
     
             if (isset($email) && isset($senha)) {
                 $postData = [
@@ -59,7 +59,7 @@ class LoginController extends Controller{
     
     public function registro()
     {
-        $url = API_BASE . 'api/LoginAluno';
+        $url = API_BASE . 'CadastroAluno';
     
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $nome = filter_input(INPUT_POST, 'nome_aluno', FILTER_SANITIZE_SPECIAL_CHARS);
