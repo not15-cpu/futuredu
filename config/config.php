@@ -4,12 +4,6 @@
 define("URL_BASE", "http://localhost/futuredu/public/");
 define("API_BASE", "http://localhost/sistema-escola/public/api/");
 
-// Configurações do Email
-define('EMAIL_HOST', 'smtp.hostinger.com.br');
-define('EMAIL_PORT', '465');
-define('EMAIL_USER', 'tipi03@smpsistema.com.br');
-define('EMAIL_PASS', 'Senac@tipi03');
-
 
 //Sistemas de carregamento automatico de class
 spl_autoload_register(function ($class) {
