@@ -1,0 +1,7 @@
+# Ignorar arquivos temporários do sistema
+*.log
+*.tmp
+
+# Ignorar pastas
+config/
+.git/
