@@ -13,7 +13,7 @@
         <header>
             <img src="<?=URL_BASE;?>assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
         </header>
-        <a href="notas.html" class="backBtn">⮨</a>
+        <a href="<?=URL_BASE;?>index.php?url=home" class="backBtn">⮨</a>
         <h2>Notas do Curso<br>DEVWEB01</h2>
         <div class="results">
             <div class="result nota-curso">

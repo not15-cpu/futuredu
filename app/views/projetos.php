@@ -13,7 +13,7 @@
         <header>
             <img src="assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
         </header>
-        <a href="menu.html" class="backBtn">⮨</a>
+        <a href="<?=URL_BASE;?>index.php?url=home" class="backBtn">⮨</a>
         <h2>Meus Projetos</h2>
         <div class="projetos">
             <div class="projeto">

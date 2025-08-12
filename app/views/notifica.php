@@ -13,7 +13,7 @@
         <header>
             <img src="assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
         </header>
-        <a href="settings.html" class="backBtn">⮨</a>
+        <a href="<?=URL_BASE;?>index.php?url=settings" class="backBtn">⮨</a>
         <h2>Notificações & Comunicados</h2>
         <div class="notifics">
             <div class="notific">

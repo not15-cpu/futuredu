@@ -11,7 +11,7 @@
         <header>
             <img src="assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
         </header>
-        <a href="menu.html" class="backBtn back">⮨</a>
+        <a href="<?=URL_BASE;?>index.php?url=home" class="backBtn back">⮨</a>
         <h2>Configurações</h2>
         <div class="options">
             <button class="settingsBtn"><a href="editar.html">👤 Atualização de dados pessoais</a></button>
