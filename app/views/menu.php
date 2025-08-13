@@ -15,10 +15,10 @@
         <button class="fonte-maior" tabindex="0" onclick="aumentarFonte()" data-tts="Aumentar Fonte">+</button>
         
         <?php
-        $nomeCompleto = $aluno['nome_aluno'];
+        $nomeCompleto = $aluno['nome_aluno'] ?? '';
         $nomeAluno = explode(' ', $nomeCompleto);
         ?>
-        <h1 data-tts="Olá, <?=$nomeAluno[0];?>!">Olá, <?=$nomeAluno[0];?>!</h1>
+        <h1 data-tts="Olá, <?=$nomeAluno[0];?>!">Olá, <?=$nomeAluno[0] ?? 'Aluno';?>!</h1>
         <h2 data-tts="O que você deseja fazer hoje?">O que você deseja fazer hoje?</h2>
         <div class="acesso">
             <h2>Acesso Rápido</h2>
