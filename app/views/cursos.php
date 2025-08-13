@@ -17,10 +17,11 @@
         <h2>Cursos Matriculados</h2>
         <div class="cursos">
             <?php foreach($matriculas as $curso): ?>
-            <a href="<?=URL_BASE;?>courses/nota/<?=$link;?>">
+            <?php $link = $this->gerarLinkCurso($curso['nome_curso']);?>
+            <a href="<?=URL_BASE;?>index.php?url=courses/nota/<?=$link;?>">
                 <div class="curso">
                     <div class="img-space">
-                        <img src="assets/img/alunos/carlos.jpg" alt="">
+                        <img src="<?=URL_BASE;?>assets/img/curso/<?=$curso['foto_curso'];?>" alt="">
                     </div>
                     <h2><?=$curso['nome_sigla'];?></h2>
                     <h3><?=$curso['nome_curso'];?></h3>
