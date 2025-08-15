@@ -23,10 +23,10 @@
         <div class="acesso">
             <h2>Acesso Rápido</h2>
             <button class="menuBtn" data-tts="Meus Cursos"><a href="<?=URL_BASE;?>index.php?url=courses">📚 Meus Cursos</a></button>
-            <button class="menuBtn" data-tts="Minhas Notas"><a href="<?=URL_BASE;?>courses/notas">📝 Minhas Notas</a></button>
-            <button class="menuBtn" data-tts="Meus Projetos"><a href="<?=URL_BASE;?>projects">📁 Meus Projetos</a></button>
-            <button class="menuBtn" data-tts="Enviar Mensagem"><a href="<?=URL_BASE;?>messages">📨 Enviar Mensagem</a></button>
-            <button class="menuBtn" data-tts="Configurações"><a href="<?=URL_BASE;?>settings">⚙️ Configurações</a></button>
+            <button class="menuBtn" data-tts="Minhas Notas"><a href="<?=URL_BASE;?>index.php?url=courses/notas">📝 Minhas Notas</a></button>
+            <button class="menuBtn" data-tts="Meus Projetos"><a href="<?=URL_BASE;?>index.php?url=projects">📁 Meus Projetos</a></button>
+            <button class="menuBtn" data-tts="Enviar Mensagem"><a href="<?=URL_BASE;?>index.php?url=messages">📨 Enviar Mensagem</a></button>
+            <button class="menuBtn" data-tts="Configurações"><a href="<?=URL_BASE;?>index.php?url=settings">⚙️ Configurações</a></button>
         </div>
         <?php require_once('templates/footer.php');?>
     </div>

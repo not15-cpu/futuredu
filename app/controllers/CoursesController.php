@@ -7,15 +7,18 @@ class CoursesController extends Controller{
     public function index(){
         $dados = array();
 
-        $aluno = $_SESSION['aluno'];
+        $userId = $_SESSION['id_aluno'];
 
-        $userId = $aluno['id_aluno'];
-
-        $url = API_BASE."ListarCursosMatriculados/".$userId;
+        $url = API_BASE.'ListarCursosMatriculados/'.$userId;     
 
         $ch = curl_init($url);
-
+        $token = $_SESSION['token_aluno'];
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Content-Type: application/x-www-form-urlencoded',
+            'Accept: application/json',
+            'Authorization: Bearer '.$token
+        ]);
 
         $response = curl_exec($ch);
         curl_close($ch);
@@ -28,7 +31,7 @@ class CoursesController extends Controller{
 
     public function notas(){
         $dados = array();
-
+        // Colocar para puxar via API com token.
         $this->carregarViews('notas', $dados);
     }
 

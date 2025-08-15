@@ -43,7 +43,7 @@
                 <h3>Responsável:</h3>
                 <p><?=$aluno['nome_responsavel'];?> - <?=$aluno['telefone_responsavel'];?></p>
             </div>
-            <button class="editPf"><a href="editar.html">Editar</a></button>
+            <button class="editPf"><a href="<?=URL_BASE;?>index.php?url=perfil/editar">Editar</a></button>
         </div>
         <?php require_once('templates/footer.php');?>
     </div>

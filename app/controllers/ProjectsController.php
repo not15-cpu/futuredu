@@ -2,20 +2,21 @@
 
 
 
-class HomeController extends Controller{
+class ProjectsController extends Controller{
 
-    public function index(){
+    public function index()
+    {
         $dados = array();
-
+        
         if(!isset($_SESSION['token_aluno'])){
-            header("Location:".URL_BASE."index.php?url=login");
+            header("Location:".URL_BASE."login");
             exit;
         }
 
-        $userId = $_SESSION['id_aluno'];
+        $alunoId = $_SESSION['id_aluno'];
 
-        $url = API_BASE.'ListarAlunoId/'.$userId;     
-
+        $url = API_BASE . "ListarProjetosIncritos/".$alunoId;
+        
         $ch = curl_init($url);
         $token = $_SESSION['token_aluno'];
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -23,18 +24,13 @@ class HomeController extends Controller{
             'Accept: application/json',
             'Authorization: Bearer '.$token
         ]);
-
         $response = curl_exec($ch);
-        curl_close($ch);
-        
         $resultado = json_decode($response, true);
-        if($resultado['id_aluno']){
-            $dados['aluno'] = $resultado;
+        if(!empty($resultado)){
+            $dados['projetos'] = $resultado;
         }
 
-            
-        $this->carregarViews('menu', $dados);
-
+        $this->carregarViews('projetos', $dados);
     }
 
 }

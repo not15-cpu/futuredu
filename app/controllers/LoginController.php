@@ -37,15 +37,24 @@ class LoginController extends Controller{
                     echo 'Erro no cURL: ' . curl_error($ch);
                 } else {
                     $resultado = json_decode($response, true); // decodifica JSON da resposta
-                    if ($resultado['mensagem'] == 'Tudo Certo!') {
+                    if (!is_array($resultado) || empty($resultado['mensagem'])) {
+                        $_SESSION['erro_login'] = 'Resposta inválida da API.';
+                        header("Location: " . URL_BASE . "index.php?url=login");
+                        exit;
+                    }
+
+                    if ($resultado['mensagem'] === 'Tudo Certo!') {
                         $_SESSION['sucesso_login'] = 'Conectado com sucesso, redirecionando para o menu.';
-                        $_SESSION['aluno'] = $resultado['Aluno'];
+                        $_SESSION['aluno'] = $resultado['id_aluno'];
+                        $_SESSION['token_aluno'] = $resultado['Token'];
+
                         header("Location:".URL_BASE."index.php?url=home");
                         exit;
                     } else {
                         $_SESSION['erro_login'] = 'Erro ao conectar com o servidor.';
-                        echo($resultado['erro']);
                         header("Location:".URL_BASE."index.php?url=login");
+                        echo($resultado['erro']);
+                        exit;
                     }
                 }
                 
@@ -53,6 +62,7 @@ class LoginController extends Controller{
             } else {
                 echo "Email ou senha inválidos.";
                 header("Location:".URL_BASE."index.php?url=login");
+                exit;
             }
         }
     }
