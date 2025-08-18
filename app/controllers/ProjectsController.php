@@ -9,7 +9,7 @@ class ProjectsController extends Controller{
     $dados = array();
 
     if(!isset($_SESSION['token_aluno']) || !isset($_SESSION['aluno'])){
-        header("Location:".URL_BASE."login");
+        header("Location:".URL_BASE."index.php?url=login");
         exit;
     }
 
