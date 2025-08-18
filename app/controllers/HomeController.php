@@ -12,7 +12,12 @@ class HomeController extends Controller{
             exit;
         }
 
-        $userId = $_SESSION['id_aluno'];
+        if(isset($_SESSION['aluno'])){
+            $userId = $_SESSION['aluno'];
+        }else{
+            header("Location:".URL_BASE."index.php?url=login");
+            exit;
+        }
 
         $url = API_BASE.'ListarAlunoId/'.$userId;     
 

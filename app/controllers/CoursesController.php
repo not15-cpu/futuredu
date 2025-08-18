@@ -5,18 +5,21 @@
 class CoursesController extends Controller{
 
     public function index(){
+        
+        if(isset($_SESSION['token_aluno'])){
+            $token = $_SESSION['token_aluno'];
+        }
+
         $dados = array();
 
-        $userId = $_SESSION['id_aluno'];
+        $userId = $_SESSION['aluno'];
 
         $url = API_BASE.'ListarCursosMatriculados/'.$userId;     
 
         $ch = curl_init($url);
-        $token = $_SESSION['token_aluno'];
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            'Content-Type: application/x-www-form-urlencoded',
-            'Accept: application/json',
+            'Content-Type: application/json',
             'Authorization: Bearer '.$token
         ]);
 

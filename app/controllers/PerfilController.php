@@ -11,7 +11,7 @@ if(!isset($_SESSION['token_aluno'])){
             exit;
         }
 
-        $userId = $_SESSION['id_aluno'];
+        $userId = $_SESSION['aluno'];
 
         $url = API_BASE.'ListarAlunoId/'.$userId;     
 
@@ -38,12 +38,12 @@ if(!isset($_SESSION['token_aluno'])){
     public function editar()
     {
         $dados = array();
-        if(!isset($_SESSION['id_aluno'])){
+        if(!isset($_SESSION['token_aluno'])){
                     header("Location:".URL_BASE."index.php?url=login");
                     exit;
                 }
         
-                $userId = $_SESSION['id_aluno'];
+                $userId = $_SESSION['aluno'];
         
                 $url = API_BASE.'ListarAlunoId/'.$userId;     
         

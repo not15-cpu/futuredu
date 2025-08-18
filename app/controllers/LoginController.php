@@ -119,8 +119,8 @@ class LoginController extends Controller{
 
     public function logout(){
         if(session_status() === PHP_SESSION_ACTIVE){
+            header("Location:".URL_BASE."index.php?url=login");
             session_destroy();
-            header("Location:" .URL_BASE);
             exit;
         }
     }

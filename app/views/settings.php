@@ -14,9 +14,9 @@
         <a href="<?=URL_BASE;?>index.php?url=home" class="backBtn back">⮨</a>
         <h2>Configurações</h2>
         <div class="options">
-            <button class="settingsBtn"><a href="editar.html">👤 Atualização de dados pessoais</a></button>
-            <button class="settingsBtn"><a href="notifica.html">🔔 Notificações e Comunicados</a></button>
-            <button class="settingsBtn"><a href="<?=URL_BASE;?>login/logout">🚪 Sair</a></button>
+            <button class="settingsBtn"><a href="<?=URL_BASE;?>index.php?url=perfil/editar">👤 Atualização de dados pessoais</a></button>
+            <button class="settingsBtn"><a href="<?=URL_BASE;?>index.php?url=messages">🔔 Notificações e Comunicados</a></button>
+            <button class="settingsBtn"><a href="<?=URL_BASE;?>index.php?url=login/logout">🚪 Sair</a></button>
         </div>
         <?php require_once('templates/footer.php');?>
     </div>
