@@ -20,7 +20,7 @@
             <button class="submit-btn" type="submit" style="cursor:pointer;">Entrar</button>
     </form>
     <button class="submit-btn" style="margin-top: 10px;"><a href="<?= URL_BASE; ?>register">Cadastrar</a></button>
-    <a href="<?= URL_BASE; ?>forgot">Esqueceu a Senha?</a>
+    <a href="<?= URL_BASE; ?>index.php?url=login/esqueci">Esqueceu a Senha?</a>
 </body>
 </div>
 

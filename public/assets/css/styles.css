@@ -123,7 +123,6 @@ body {
     font-size: 18px;
     color: #fff;
     border: none;
-    cursor: pointer;
     border-radius: 10px;
 
     a {
@@ -261,7 +260,7 @@ footer {
 .curso {
     display: flex;
     margin-top: 10px;
-    width: 380px;
+    width: 340px;
     border-radius: 10px;
     height: 120px;
     border: none;

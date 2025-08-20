@@ -39,6 +39,7 @@ class Routes
             // 3. Parâmetros
             if (count($url) > 0) {
                 $parametro = $url;
+                //var_dump($parametro);
             }
         } else {
             $controladorAtual = 'LoginController';
