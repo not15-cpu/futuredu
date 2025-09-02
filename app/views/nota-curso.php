@@ -16,10 +16,10 @@
         <a href="<?=URL_BASE;?>index.php?url=home" class="backBtn">⮨</a>
         <h2>Notas do Curso<br>DEVWEB01</h2>
         <div class="results">
-            <div class="result nota-curso">
+            <div class="caixa1">
                 <h1>Avaliação 1</h1>
-                <h3>Nota: 7.8</h3>
-                <h2>Data: 16/05/2025</h2>
+                <p>Nota: 7.8</p>
+                <p>Data: 16/05/2025</p>
                 <h2>Observação<br>Boa estrutura de código, utilize mais comentários.</h2>
             </div>
         </div>

@@ -7,6 +7,7 @@ if(session_status() === PHP_SESSION_NONE){
 // No PHP, a função define() é usada para criar constantes, ou seja, valores que não podem ser alterados durante a execução do script. Ela permite que você associe um nome a um valor fixo que será acessível globalmente.
 define("URL_BASE", "http://localhost/futuredu/public/");
 define("API_BASE", "http://localhost/sistema-escola/public/api/");
+define("CDN_BASE", "http://localhost/sistema-escola/public/uploads/");
 
 //Sistemas de carregamento automatico de class
 spl_autoload_register(function ($class) {

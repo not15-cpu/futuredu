@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FuturEdu - Menu</title>
+    <link rel="manifest" href="<?=URL_BASE;?>manifest.json">
     <link rel="stylesheet" href="<?=URL_BASE;?>assets/css/styles.css">
 </head>
+<title>FuturEdu - Menu</title>
 <body class="menu-body">
     <div class="menu-aluno">
-        <header>
-            <img src="<?=URL_BASE;?>assets/img/logo/logo-futuedu-preto.svg" alt="Logo FuturEdu" class="logo">
-        </header>
-        <button class="fonte-menor" tabindex="0" onclick="diminuirFonte()" data-tts="Diminuir Fonte">-</button>
-        <button class="fonte-maior" tabindex="0" onclick="aumentarFonte()" data-tts="Aumentar Fonte">+</button>
+        <?php require_once('templates/header.php');?>
         
         <?php
         $nomeCompleto = $aluno['nome_aluno'] ?? '';

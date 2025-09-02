@@ -21,7 +21,7 @@
             <a href="<?=URL_BASE;?>index.php?url=courses/nota/<?=$link;?>">
                 <div class="curso">
                     <div class="img-space">
-                        <img src="<?=URL_BASE;?>assets/img/curso/<?=$curso['foto_curso'];?>" alt="">
+                        <img src="<?=URL_BASE;?>uploads/curso/<?=$curso['foto_curso'];?>" alt="">
                     </div>
                     <h2><?=$curso['nome_sigla'];?></h2>
                     <h3><?=$curso['nome_curso'];?></h3>

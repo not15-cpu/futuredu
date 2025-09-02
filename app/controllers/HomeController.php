@@ -12,10 +12,19 @@ class HomeController extends Controller{
             exit;
         }
 
-        if(isset($_SESSION['aluno'])){
-            $userId = $_SESSION['aluno'];
-        }else{
-            header("Location:".URL_BASE."index.php?url=login");
+        $token = $_SESSION['token_aluno'];
+
+        $payload = AuxiliarToken::validar($token);
+        if(!$payload){
+            echo 'Token inválido ou expirado. Faça login novamente';
+            header("Location:".URL_BASE);
+            exit;
+        }
+
+        $userId = $payload['id'];
+
+        if(!$userId){
+            echo 'ID do aluno não encontrado';
             exit;
         }
 

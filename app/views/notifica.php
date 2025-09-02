@@ -16,21 +16,13 @@
         <a href="<?=URL_BASE;?>index.php?url=settings" class="backBtn">⮨</a>
         <h2>Notificações & Comunicados</h2>
         <div class="notifics">
+            <?php foreach($notifics as $notific): ?>
             <div class="notific">
-                <h2>Nota Lançada</h2>
-                <h3>Sua nota da Avaliação 2 de desenvolvimento web foi atualizada.</h3>
-                <p>15/07/2025 14:00</p>
+                <h2><?=$notific['title_notificacao'];?></h2>
+                <h3><?=$notific['desc_notificacao'];?></h3>
+                <p><?=date('d/m/Y H:i:s', strtotime($notific['criado_em']));?></p>
             </div>
-            <div class="notific">
-                <h2>Evento: Feira Tecnológica</h2>
-                <h3>Participe da feira tecnológica no dia 20/08 no nosso campus principal.</h3>
-                <p>15/07/2025 14:57</p>
-            </div>
-            <div class="notific">
-                <h2>Atualização de Dados</h2>
-                <h3>Verifique e atualize seus dados pessoas no menu configurações ou na guia perfil.</h3>
-                <p>15/07/2025 16:40</p>
-            </div>
+            <?php endforeach;?>
         </div>
 
         <?php require_once('templates/footer.php');?>
